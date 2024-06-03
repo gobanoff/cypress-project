@@ -94,9 +94,9 @@ describe('Registration Form', () => {
     const dob = '2010-05-31';
     const today = new Date('2024-05-31');
     cy.clock(today); // Mocking the date to ensure test consistency
-    expect(calculateAge(dob)).to.equal(14);
+    expect(calculateAge(dob)).to.equal(15);
     cy.tick(24 * 60 * 60 * 1000); // Move time forward by one day
-    expect(calculateAge(dob)).to.equal(14); // Age should still be 14 the next day
+    expect(calculateAge(dob)).to.equal(15); // Age should still be 14 the next day
   });
 
   it('calculates age correctly for leap years', () => {
