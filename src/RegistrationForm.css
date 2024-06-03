@@ -1,0 +1,86 @@
+body {
+  position: relative;
+}
+.registration-form {
+  height: 600px;
+  width: 700px;
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f2f3f0;
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.registration-form input {
+  font-size: 22px;
+  margin-bottom: 40px;
+  width: 550px;
+  padding: 15px;
+  border: none;
+  border-radius: 7px;
+}
+
+.registration-form button {
+  font-size: 22px;
+  height: 70px;
+  font-weight: 700;
+  width: 670px;
+  padding: 10px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.registration-form button:hover {
+  background-color: #28dd11;
+  color: black;
+}
+
+.error {
+  font-weight: 700;
+  color: red;
+  font-size: 0.8em;
+}
+
+.submitted-info {
+  position: absolute;
+  top: 150px;
+  left: 120px;
+}
+label {
+  color: #c4bcbc;
+  padding-right: 0px;
+}
+.mail {
+  margin-left: 30px;
+}
+.birth {
+  margin-left: 5px;
+}
+h2 {
+  color: red;
+  font-weight: 800;
+}
+.i {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+h3 {
+  font-size: 25px;
+  color: #b9bed8;
+}
