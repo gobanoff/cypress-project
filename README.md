@@ -50,3 +50,11 @@ To start the application locally, run:
 
 
 npm run dev
+
+### Running Tests with Cypress
+
+npm run test
+
+### Running Tests in Continuous Integration (CI) Environments
+
+npm run test:ci
