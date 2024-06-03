@@ -46,8 +46,8 @@ body {
 }
 
 .registration-form button:hover {
-  background-color: #28dd11;
-  color: black;
+  background-color: #ffffff;
+  color: rgb(1, 89, 252);
 }
 
 .error {
