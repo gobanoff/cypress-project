@@ -38,9 +38,8 @@ jobs:
       run: npx wait-on http://localhost:5173
 
     - name: Run Cypress tests
-      run: npm run test
+      run: npx cypress run
       env:
         CI: true
 
-    - name: Run Cypress
-      run: npx cypress run
+   
