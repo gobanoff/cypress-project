@@ -55,21 +55,7 @@ describe("Registration Form", () => {
     cy.get(".submitted-info").should("contain", `Date of Birth: ${dob}`);
   });
 
-  // it('should submit the form and display the information', () => {
-  // cy.get('input[name="username"]').type('testuser');
-  //cy.get('input[name="email"]').type('test@example.com');
-  //cy.get('input[name="password"]').type('password123');
-  //cy.get('input[name="dob"]').type('2000-01-01');
-
-  //cy.get('button[type="submit"]').click();
-
-  //cy.get('.submitted-info').should('exist');
-  //cy.get('.submitted-info').should('contain', 'Username: testuser');
-  //cy.get('.submitted-info').should('contain', 'Email: test@example.com');
-  //cy.get('.submitted-info').should('contain', 'Date of Birth: 2000-01-01');
-
-  //});
-
+  
   it("should calculate and display the correct age", () => {
     const username = "testuser";
     const email = "test@example.com";
