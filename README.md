@@ -28,8 +28,8 @@ Ensure you have the following installed on your machine:
 
    
     git clone https://github.com/gobanoff/cypress-project
-    
-    cd <repository-directory>
+
+    cd repository-directory
    
 
 2. Install the dependencies:
