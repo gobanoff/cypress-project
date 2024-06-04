@@ -34,21 +34,25 @@ Ensure you have the following installed on your machine:
 
 2. Install the dependencies:
 
-   
+    ```sh
     npm install
+    ```
    
 
 3. Install Cypress:
 
-    
+      ```sh
     npm install cypress --save-dev
+    ```
    
-
+   
 ### Running the Application
 
 To start the application locally and run tests concurrently, use:
 
-npm run dev
+
+   npm run dev
+
 
 ### Running Tests in Continuous Integration (CI) Environments
 
