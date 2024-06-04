@@ -71,7 +71,7 @@ const RegistrationForm = () => {
         <div>
           {" "}
           {errors.username && <p className="error">{errors.username}</p>}
-          <label>Username: </label>
+          <label>Username:</label>
           <input
             type="text"
             name="username"

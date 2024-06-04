@@ -21,6 +21,28 @@ describe("Registration Form", () => {
     cy.get(".error").should("contain", "Date of Birth is required");
   });
 
+  it('should have a label with text "Username:" next to the input field', () => {
+    
+    cy.get('label').contains('Username:').next('input[name="username"]').should('exist');
+  });
+
+  it('should have a label with text "Email:" next to the input field', () => {
+    
+    cy.get('label').contains('Email:').next('input[name="email"]').should('exist');
+  });
+
+  it('should have a label with text "Password:" next to the input field', () => {
+    
+    cy.get('label').contains('Password:').next('input[name="password"]').should('exist');
+  });
+
+  it('should have a label with text "Birthday:" next to the input field', () => {
+    
+    cy.get('label').contains('Birthday:').next('input[name="dob"]').should('exist');
+  });
+
+
+
   it("displays error when email is invalid", () => {
     cy.get('input[name="email"]').type("invalid-email");
     cy.get("form").submit();
