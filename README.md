@@ -46,14 +46,9 @@ Ensure you have the following installed on your machine:
 
 ### Running the Application
 
-To start the application locally, run:
-
+To start the application locally and run tests concurrently, use:
 
 npm run dev
-
-### Running Tests with Cypress
-
-npm run test
 
 ### Running Tests in Continuous Integration (CI) Environments
 
