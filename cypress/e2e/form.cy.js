@@ -22,26 +22,32 @@ describe("Registration Form", () => {
   });
 
   it('should have a label with text "Username:" next to the input field', () => {
-    
-    cy.get('label').contains('Username:').next('input[name="username"]').should('exist');
+    cy.get("label")
+      .contains("Username:")
+      .next('input[name="username"]')
+      .should("exist");
   });
 
   it('should have a label with text "Email:" next to the input field', () => {
-    
-    cy.get('label').contains('Email:').next('input[name="email"]').should('exist');
+    cy.get("label")
+      .contains("Email:")
+      .next('input[name="email"]')
+      .should("exist");
   });
 
   it('should have a label with text "Password:" next to the input field', () => {
-    
-    cy.get('label').contains('Password:').next('input[name="password"]').should('exist');
+    cy.get("label")
+      .contains("Password:")
+      .next('input[name="password"]')
+      .should("exist");
   });
 
   it('should have a label with text "Birthday:" next to the input field', () => {
-    
-    cy.get('label').contains('Birthday:').next('input[name="dob"]').should('exist');
+    cy.get("label")
+      .contains("Birthday:")
+      .next('input[name="dob"]')
+      .should("exist");
   });
-
-
 
   it("displays error when email is invalid", () => {
     cy.get('input[name="email"]').type("invalid-email");
@@ -77,33 +83,28 @@ describe("Registration Form", () => {
     cy.get(".submitted-info").should("contain", `Date of Birth: ${dob}`);
   });
 
-  
+ 
+
+    
+
   it("should calculate and display the correct age", () => {
     const username = "testuser";
     const email = "test@example.com";
     const password = "password123";
     const dob = "2000-01-01";
+    const expectedAge = "24";
 
     cy.get('input[name="username"]').type(username);
     cy.get('input[name="email"]').type(email);
     cy.get('input[name="password"]').type(password);
     cy.get('input[name="dob"]').type(dob);
-
+  
     cy.get('button[type="submit"]').click();
-
-    const today = new Date();
-    const birthDate = new Date(dob);
-    let expectedAge = today.getFullYear() - birthDate.getFullYear();
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-    if (
-      monthDiff < 0 ||
-      (monthDiff === 0 && today.getDate() < birthDate.getDate())
-    ) {
-      expectedAge--;
-    }
-
+  
+    
     cy.get(".submitted-info").within(() => {
-      cy.contains(expectedAge).should("be.visible");
+      cy.contains(`Age:${expectedAge}`).should("be.visible"); 
     });
   });
+  
 });
